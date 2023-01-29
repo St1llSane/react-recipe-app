@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+  max-width: 380px;
+  margin: 15px auto 25px auto;
+
+  input {
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 10px 10px 9px 40px;
+    border: 2px solid #dfdfff;
+    border-radius: 50px;
+    transition: border-color 0.2s ease;
+
+    &::placeholder {
+      color: #dfdfff;
+    }
+
+    &:focus {
+      border-color: #cdcdff;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+		color: #dfdfff;
+  }
+}

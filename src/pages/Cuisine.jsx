@@ -22,6 +22,7 @@ const Cuisine = () => {
       {cuisine.map((recipe) => (
         <div className="cuisine__item" key={recipe.id}>
           <img src={recipe.image} alt={recipe.title} />
+					<h4>{recipe.title}</h4>
         </div>
       ))}
     </div>
