@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
+import { Link } from 'react-router-dom'
 import '../styles/c_styles/popular.scss'
 
 const LS_POPULAR_KEY = 'popular'
@@ -47,10 +48,12 @@ const Popular = () => {
       >
         {popular.map((recipe) => (
           <SplideSlide key={recipe.id}>
-            <div className="popular__item">
-              <h5>{recipe.title}</h5>
-              <img src={recipe.image} alt={recipe.title} />
-            </div>
+            <Link to={`/recipe/${recipe.id}`}>
+              <div className="popular__item">
+                <h5>{recipe.title}</h5>
+                <img src={recipe.image} alt={recipe.title} />
+              </div>
+            </Link>
           </SplideSlide>
         ))}
       </Splide>

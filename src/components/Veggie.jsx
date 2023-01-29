@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import '../styles/c_styles/veggie.scss'
+import { Link } from 'react-router-dom'
 
 const LS_VEGGIE_KEY = 'veggie'
 
@@ -47,10 +48,12 @@ const Veggie = () => {
       >
         {veggie.map((recipe) => (
           <SplideSlide key={recipe.id}>
-            <div className="veggie__item">
-              <h5>{recipe.title}</h5>
-              <img src={recipe.image} alt={recipe.title} />
-            </div>
+            <Link to={`/recipe/${recipe.id}`}>
+              <div className="veggie__item">
+                <h5>{recipe.title}</h5>
+                <img src={recipe.image} alt={recipe.title} />
+              </div>
+            </Link>
           </SplideSlide>
         ))}
       </Splide>
