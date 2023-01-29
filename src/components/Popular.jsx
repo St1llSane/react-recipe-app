@@ -15,7 +15,7 @@ const Popular = () => {
     if (checkLs) {
       return setPopular(JSON.parse(checkLs))
     }
-		
+
     try {
       const fetchData = async () => {
         const res = await axios.get(
@@ -34,6 +34,7 @@ const Popular = () => {
 
   return (
     <section className="popular">
+      <h2 className="popular__title">Popular</h2>
       <Splide
         className="popular__slider"
         options={{

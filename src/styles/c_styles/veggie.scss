@@ -1,6 +1,6 @@
 @import '../vars.scss';
 
-.popular {
+.veggie {
   margin: 3rem 0;
 
 	&__title {
@@ -17,7 +17,7 @@
 	}
 
   &__item {
-    height: 180px;
+    height: 210px;
     border-radius: 10px;
 		overflow: hidden;
     position: relative;
