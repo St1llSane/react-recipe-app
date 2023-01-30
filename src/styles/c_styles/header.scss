@@ -1,0 +1,14 @@
+.header {
+	padding: 10px 0;
+
+	a {
+		&:hover svg {
+			color: #b8b8ff;
+		}
+
+		svg {
+			font-size: 3.2rem;
+			transition: color .2s ease;
+		}
+	}
+}

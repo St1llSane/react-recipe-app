@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import '../styles/c_styles/searched.scss'
 
 const Searched = () => {
@@ -15,16 +15,18 @@ const Searched = () => {
       setSearched(res.data.results)
     }
     getSearched(params.search)
-		console.log(params.search)
+    console.log(params.search)
   }, [params.search])
 
   return (
     <div className="searched">
       {searched.map((recipe) => (
-        <div className="searched__item" key={recipe.id}>
-          <img src={recipe.image} alt={recipe.title} />
-					<h4>{recipe.title}</h4>
-        </div>
+        <Link to={`/recipe/${recipe.id}`}>
+          <div className="searched__item" key={recipe.id}>
+            <img src={recipe.image} alt={recipe.title} />
+            <h4>{recipe.title}</h4>
+          </div>
+        </Link>
       ))}
     </div>
   )

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import '../styles/c_styles/cuisine.scss'
 
 const Cuisine = () => {
@@ -20,10 +20,12 @@ const Cuisine = () => {
   return (
     <div className="cuisine">
       {cuisine.map((recipe) => (
-        <div className="cuisine__item" key={recipe.id}>
-          <img src={recipe.image} alt={recipe.title} />
-					<h4>{recipe.title}</h4>
-        </div>
+        <Link to={`/recipe/${recipe.id}`}>
+          <div className="cuisine__item" key={recipe.id}>
+            <img src={recipe.image} alt={recipe.title} />
+            <h4>{recipe.title}</h4>
+          </div>
+        </Link>
       ))}
     </div>
   )
