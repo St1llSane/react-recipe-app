@@ -7,16 +7,16 @@
     font-size: 1.6rem;
     width: 100%;
     padding: 10px 10px 9px 40px;
-    border: 2px solid #dfdfff;
+    border: 2px solid #d0d0ff;
     border-radius: 50px;
     transition: border-color 0.2s ease;
 
     &::placeholder {
-      color: #dfdfff;
+      color: #d0d0ff;
     }
 
     &:focus {
-      border-color: #cdcdff;
+      border-color: #b8b8ff;
     }
   }
 
@@ -25,6 +25,6 @@
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-		color: #dfdfff;
+		color: #d0d0ff;
   }
 }
